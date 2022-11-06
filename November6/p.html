@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+  let name = prompt("Please enter your name", "name");
+  if (name != null) {
+    alert("Hello " + name + "! How are you today?") ;
+
+  }
+
+document.write("<hr>");
+
+// Conversion
+let testNumber=5,testStr="Hello World",mathNum="3.94";
+document.write(typeof testNumber+"<br>");
+document.write(typeof testStr+"<br>");
+
+
+//Converting Strings to Numbers
+document.write(Number(testStr)+"<br>");    // non numeric string converts to NaN (Not a Number).
+document.write(Number(mathNum)+"<br>");   //numeric string converts to a number 
+document.write(Number(" ")+"<br>");      //An empty string converts to 0
+//parseFloat()    Parses a string and returns a floating point number
+//parseInt()    Parses a string and returns an integer
+document.write(parseInt(mathNum)+"<br>");
+
+
+
+// The Unary + Operator: The unary + operator can be used to convert a variable to a number:
+let numTest="5";
+let secondNum =+ numTest;
+document.write(typeof numTest+"<br>");
+document.write(typeof secondNum+"<br>");
+
+
+
+//Converting Numbers to Strings
+document.write(String(100+50)+"<br>");
+document.write((123).toString()+"<br>");
+
+
+
+//Converting Booleans to Strings
+document.write(String(false)+"<br>");
+document.write(true.toString()+"<br>");
+document.write("<hr>");
+
+//Switch Statement
+let day;
+switch (new Date().getDay()) {
+  case 1:
+    day = "Sunday";
+    break;
+  case 2:
+    day = "Monday";
+    break;
+  case 3:
+    day = "Tuesday";
+    break;
+  case 4:
+    day = "Wednesday";
+    break;
+  case 5:
+    day = "Thursday";
+    break;
+  case 6:
+    day = "Friday";
+    break;
+default: // else
+    day = "Saturday";
+}
+document.write("Today is " + day);
+
+
+</script>
+
+</body>
+</html>
