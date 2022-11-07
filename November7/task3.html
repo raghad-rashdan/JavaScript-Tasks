@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>function  that accepts an array of strings and returns the shortest string inside this array</p>
+        <script>
+ var short_Length = 10;
+var short_Value ;
+function shorterInArray(array){
+    for(var c=0; c<array.length; c++){
+        if(array[c].length < short_Length){
+            short_Length = array[c].length;
+            short_Value = array[c];
+        }
+    }
+    document.write("the shortest string is: "+short_Value+"<br>");
+    document.write("the  length of shortest string is= "+short_Length);
+}
+shorterInArray(["alex","mercer","madrasa","rashed2","emad","hala"]);
+        </script>
+    </body>
+</html>

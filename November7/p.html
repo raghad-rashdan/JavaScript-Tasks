@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//string methods
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.write("The length of the string is: "+ text.length + "<br>")
+document.write("The substring (3-10) is: "+ text.substring(3,10)+ "<br>");
+document.write("The substr (3-10) is: "+ text.substr(3,10)+ "<br>");
+document.write("The substr (-5) is: "+ text.substr(-5)+ "<br>");
+document.write("Replace (BCDEFGH) with (AAAAAAA)  in the text : "+ text.replace("BCDEFGH","AAAAAAA")+ "<br>");
+
+
+document.write("<hr>")
+// array
+// const array_name = [item1, item2, ...];    
+
+// const array_name = [];
+// array_name[index0]= "item1";
+// array_name[index1]= "item2";
+// array_name[index2]= "item3";
+
+// const array_name = new Array("item1", "item2", "item3");
+
+const cars = ["Saab", "Volvo", "BMW"];
+document.write(cars+"<br>"); //Saab,Volvo,BMW
+document.write(cars[1]+"<br>"); //volvo
+
+//print array using for
+for(let x=0;x<3;x++){
+    document.write(cars[x]+"<br>");
+}
+document.write("<hr>")
+//object 
+const car = {type:"Fiat", model:"500", color:"white"};
+document.write( "The car type is " + car.type + "<br>");
+document.write( "The car model is " + car.model + "<br>");
+document.write( "The car color is " + car.color + "<br>");
+
+document.write("<hr>")
+
+//function
+var sum = sumFunction(4, 3);
+document.write(sum);
+
+function sumFunction(a, b) {
+  return a + b;
+}
+    </script>
+    </body>
+    </html>
