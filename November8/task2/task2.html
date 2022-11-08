@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <style>
+#img{
+    width: 300px;
+    height: 150px;
+}
+    </style>
+    <body>
+        <select id="dropdown" onchange="showImage(this.value)">
+           <option value="usa" >usa</option>
+           <option value="jordan" >jordan</option>
+           <option value="france">france</option>
+           <option value="norway"selected>norway</option>
+           <option value="Australian">Australian</option>
+</select>
+       
+<div>  <br/> <img id="img"><div>
+        <script>
+  var myMap= new Map();
+    myMap.set("usa","usa.jpg")
+    myMap.set("jordan","jordan.jpg")
+    myMap.set("france","france.jpg")
+    myMap.set("norway","norway.jpg")
+    myMap.set("Australian","Australian.jpg")
+        function showImage(value) {
+          var a = document.getElementById('dropdown').value;
+    alert(a)
+    img.src=myMap.get(a);
+    document.getElementById("img").innerHTML=img.src
+        }
+  </script>
+    </body>
+</html>

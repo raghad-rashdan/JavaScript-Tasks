@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p id="oneid">Finding HTML Elements by Id</p>
+        <p>This example demonstrates the <b>getElementsById</b> method.</p>
+        <br>
+        <p>Finding HTML Elements by Class Name.</p>
+        <p class="intro">Hello World!</p>
+        <br>
+        <p>Finding HTML Elements by Tag Name.</p>
+        <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+        <br>
+        <p>Add a background color all elements with class="example":</p>
+<h2 class="example">A heading</h2>
+<p class="example">A paragraph.</p> 
+<button onclick="Qall()">Try it</button>
+<br>
+<!-- <p>set att</p>
+<button>Hello World</button><br> -->
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+
+
+        <script>
+            //DOM
+            //id
+        const element = document.getElementById("oneid");
+        document.getElementById("demo").innerHTML = 
+        "The text from the intro paragraph is: " + element.innerHTML +"<br>";
+        //class
+        const x = document.getElementsByClassName("intro");
+        document.getElementById("demo2").innerHTML = 
+        'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML+"<br>";
+        //Tag Name
+        const element1 = document.getElementsByTagName("p");
+        document.getElementById("demo3").innerHTML = 'The text in first paragraph (index 0) is: ' + element1[4].innerHTML;
+        // returns the first element that matches a CSS selector(element).
+        document.querySelector("p").style.backgroundColor = "lightblue";
+        document.querySelector(".intro").style.backgroundColor = "lightgray";
+        // returns the all element that matches a CSS selector (returns nodelist).
+        function Qall(){
+            const nodeList = document.querySelectorAll(".example");
+for (let i = 0; i < nodeList.length; i++) {
+  nodeList[i].style.backgroundColor = "yellow";
+        }
+}  
+// set Att
+// const button = document.querySelector("button");
+
+// button.setAttribute("name", "helloButton");
+// button.setAttribute("disabled", "rrr");
+  </script>
+    </body>
+</html>

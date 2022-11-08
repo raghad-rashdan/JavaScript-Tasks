@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="get" id="form" onchange="Forms()">
+            <!-- select font family  -->
+            <select name="" id="fontfamily">
+                <option value="Times New Roman">Times New Roman </option>
+                <option value="Arial " selected >Arial </option>
+                <option value="Segoe UI">Segoe UI</option>
+            </select>
+                        <!-- select font size  -->
+             <select  id="fontSize">
+                <option value="12pt" selected >12pt</option>
+                <option value="17pt">17pt </option>
+                <option value="20pt">20pt </option>
+                <option value="30pt">30pt</option>
+            </select>
+                        <!-- select font weight  -->
+           <input type="checkbox" id="Bold">
+            <label for="Bold"> Bold</label>
+            <input type="checkbox" id="Italic" >
+            <label for="Italic"> Italic</label>
+            <input type="checkbox" id="Underline" >
+            <label for="Underline"> Underline</label><br><br>
+          
+ <textarea  id="animal" cols="50" rows="10"> the quick brown fox jumps over the lazy dog</textarea>
+            <br> 
+        </form>
+
+        <script>
+ function Forms(){
+    //font family
+var fam=document.getElementById("fontfamily");
+switch(fam){
+    case "Arial":{
+        document.getElementById("animal").style.fontFamily=fam.value;
+        break;}
+    case "Times New Roman":{
+        document.getElementById("animal").style.fontFamily=fam.value;
+        break;}
+    case "Segoe UI":{
+        document.getElementById("animal").style.fontFamily=fam.value;
+        break;}
+    default :  document.getElementById("animal").style.fontFamily=fam.value;
+
+}
+//font size
+var siz =document.getElementById("fontSize").value;
+switch(siz){
+    case "12pt":{
+        document.getElementById("animal").style.fontSize="12pt";
+        break;}
+        case "17pt":{
+        document.getElementById("animal").style.fontSize="17pt";
+        break;}
+    case "20pt":{
+        document.getElementById("animal").style.fontSize="20pt";
+        break;}
+    case "30pt":{
+        document.getElementById("animal").style.fontSize="30pt";
+        break;}
+     default :  document.getElementById("animal").style.fontSize="50pt";
+
+}
+//font weight
+var wB=document.getElementById("Bold");
+if(wB.checked){
+    document.getElementById("animal").style.fontWeight="bold";
+}
+var wI=document.getElementById("Italic");
+if(wI.checked){
+    document.getElementById("animal").style.fontStyle ="italic";
+}
+var wU=document.getElementById("Underline");
+if(wU.checked){
+    document.getElementById("animal").style.textDecoration="underline";
+}
+}
+  </script>
+    </body>
+</html>
