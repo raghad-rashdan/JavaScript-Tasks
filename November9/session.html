@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+<script>
+    //session Storage deleted when the browser is closed. 
+    // set item  
+    // (string )
+    // ( add key and value)
+    window.sessionStorage.setItem('name1', 'momen');
+    window.sessionStorage.setItem('name2', 'rogina');
+    window.sessionStorage.setItem('name3', 'malek');
+    window.sessionStorage.setItem('name4', 'ashraf');
+    window.sessionStorage.setItem('name5', 'lubna');
+    // window.localStorage.setItem('name5', 'raghad');
+    // window.localStorage.setItem('fname', 'raghad','lname','rashdan');
+
+//get item 
+//(get item from local storage)
+window.sessionStorage.getItem('name4');
+
+//remove (remove item in local storage by key)
+window.sessionStorage.removeItem('name5');
+
+//clear (clear all item in local storage )
+window.sessionStorage.clear();
+
+//How to get the name of a key in localStorage
+var KeyName = window.sessionStorage.key(1);
+document.write(KeyName);
+</script>
+
+    </body>
+</html>

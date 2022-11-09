@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style>
+        body{
+            font-size: 20px;
+
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+           
+        }
+        .card{
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+    </style>
+    <body>
+    <form class="form">
+        <fieldset>
+            <legend> Enter your personal information</legend>
+        <label for="">your name</label>
+        <input type="text" id="name"><br>
+        <label for="">Your Age</label>
+        <input type="text" id="age">
+        <br>
+        <label for="">your gender</label>
+        <div>
+         <input type="radio" id="gender1" value="male">
+         <label for="">male</label>
+        </div>
+        <div>
+        <input type="radio" id="gender2" value="female">
+        <label for="">female</label>
+        </div><br>
+        <label for="">Brief Description</label>
+        <input type="text" id="desc"><br>
+        <label for="">Your major</label>
+        <input type="text" id="major"><br>
+        <label for="">Your university</label>
+        <input type="text" id="univ"><br><br>
+        <label for="">programing language</label>
+        <div>
+            <input type="checkbox" id="lang1" value="python">
+            <label for="">python</label>
+        </div>
+        <div>
+            <input type="checkbox" id="lang2" value="php">
+            <label for="">php</label>
+        </div>
+        <div>
+            <input type="checkbox" id="lang3" value="javascript">
+            <label for="">java script</label>
+        </div>
+        <br></fieldset>
+    </form> 
+    <button onclick="print()" id="btn">submit</button>
+    <div class="card" id="card">
+        <label>name  :</label>
+        <span class="name"></span><br>
+        <label>age   :</label>
+        <span class="age"></span><br>
+        <label>gender:</label>
+        <span class="gen"></span><br>
+        <label>Brief Description   :</label>
+        <span class="bri"></span><br>
+        <label>major :</label>
+        <span class="maj"></span><br>
+        <label>university :</label>
+        <span class="uni"></span><br>
+        <label>programing language :</label>
+        <span class="pro"></span>
+        
+        
+    </div>
+    
+<script>
+function print(){
+
+document.getElementById('card').style.display="block";
+document.getElementById('card').style.background="lightblue";
+
+
+var div1 = document.querySelector("#name").value;
+var div2 = document.querySelector("#age").value;
+let div3 ="";
+if(document.getElementById("gender1").checked)
+{
+    div3 = document.querySelector("#gender1").value;
+}
+if(document.getElementById("gender2").checked)
+{
+    div3 = document.querySelector("#gender2").value;
+}
+var div4 = document.querySelector("#desc").value;
+var div5 = document.querySelector("#major").value;
+var div6 = document.querySelector("#univ").value;
+let div7 ="";
+if(document.getElementById("lang1").checked)
+{
+    div7 += document.querySelector("#lang1").value;
+}
+if(document.getElementById("lang2").checked)
+{
+    div7 += document.querySelector("#lang2").value;
+}
+if(document.getElementById("lang3").checked)
+{
+    div7 += document.querySelector("lang3").value;
+}
+
+localStorage.setItem('name1', div1);
+localStorage.setItem('name2', div2);
+localStorage.setItem('name3', div3);
+localStorage.setItem('name4', div4);
+localStorage.setItem('name5', div5);
+localStorage.setItem('name6', div6);
+localStorage.setItem('name7', div7);
+
+localStorage.getItem('name1');
+localStorage.getItem('name2');
+localStorage.getItem('name3');
+localStorage.getItem('name4');
+localStorage.getItem('name5');
+localStorage.getItem('name6');
+localStorage.getItem('name7');
+
+document.querySelector(".name").innerHTML = div1;
+document.querySelector(".age").innerHTML = div2;
+document.querySelector(".gen").innerHTML = div3;
+document.querySelector(".bri").innerHTML = div4;
+document.querySelector(".maj").innerHTML = div5;
+document.querySelector(".uni").innerHTML = div6;
+document.querySelector(".pro").innerHTML = div7;
+
+}
+</script>
+
+    </body>
+</html>
