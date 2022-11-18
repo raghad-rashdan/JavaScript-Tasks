@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <label for="users"></label>
+        <select name="users" id="users" onchange="appearphoto()">
+          <option value="username" id="username"></option>
+        </select>
+        <br><br><br>
+        
+
+    </form>
+    <img src="" id="image">
+    <script>
+        async function InfoOfUsers(){
+
+        var mylist = document.getElementById("users"); 
+
+        const infos = await fetch("https://www.breakingbadapi.com/api/characters");
+
+        const condata = await infos.json();
+        console.log(condata);
+
+
+
+        for(let i=0; i<condata.length ; i++){
+       
+            var option = document.createElement("option");
+            option.innerHTML = condata[i].name;
+            option.value = condata[i].img;
+            users.appendChild(option);
+        
+        }
+    }
+       async function appearphoto(){
+        const aaa = document.querySelector("select").value;
+        document.getElementById("image").src = aaa;
+       }
+        
+        InfoOfUsers();
+    </script>
+</body>
+</html>
